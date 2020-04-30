@@ -22,6 +22,12 @@ Pod::Spec.new do |s|
   
   s.ios.deployment_target = "8.0"
 
-  s.source_files  = "Classes", "Pod/Classes/**/*"
+  s.prefix_header_contents = '#import "BDAttributeMakerGlobal.h"'
+  
+  
+  s.source_files  = "Pod/**/*"
 
+  s.dependency 'BDBaseUtil'
+  s.dependency 'YYText'
+  
 end
